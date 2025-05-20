@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Kerja Sama</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="logo.png" type="image/jpg" />
+</head>
+
+<body>
+      <!-- Nama: Rahmat Nur Hasan -->
+  <!-- NIM: 22SI01234 -->
+  <!-- Kelas: SI01 -->
+  <!-- Tanggal Pengerjaan: 16 Mei 2025 -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="nav-logo">
+                <img src="./assets/logo.png" alt="Logo" />
+            </div>
+            <div class="nav-center">
+                <a href="index.html">Portofolio</a>
+                <a href="kerjasama.html" class="active">Kerja Sama</a>
+            </div>
+            <button onclick="toggleTheme()" class="btn toggle-mode">Mode</button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header fade-in">
+        <h1>Formulir Penawaran Kerjasama</h1>
+        <p>Silakan isi form berikut untuk berkolaborasi bersama saya.</p>
+    </header>
+
+    <!-- Formulir -->
+    <main class="container">
+        <form class="card form-grid fade-in" action="#" method="post" enctype="multipart/form-data">
+            <div class="form-row"><label>Nama</label><input type="text" required></div>
+            <div class="form-row"><label>Alamat</label><input type="text" required></div>
+            <div class="form-row"><label>No. WA</label><input type="text" required></div>
+            <div class="form-row"><label>Email</label><input type="email" required></div>
+
+            <div class="form-row">
+                <label>Jenis Kelamin</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
+                    <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>Bidang Kerjasama</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="bidang" value="Multimedia"> Multimedia</label>
+                    <label><input type="checkbox" name="bidang" value="Web Dev"> Web Dev</label>
+                    <label><input type="checkbox" name="bidang" value="Fintech"> Fintech</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>File Penawaran</label>
+                <input type="file" id="uploadFile" onchange="showFileName()" />
+            </div>
+
+            <small id="fileNamePreview" style="margin-left: 30%; font-size: 14px;"></small>
+            <div class="loading-bar" id="loadingBar"></div>
+
+            <div class="form-row">
+                <label>Tanggal Pelaksanaan</label>
+                <input type="date" name="tanggal" required />
+            </div>
+
+            <div class="form-row">
+                <label>Domisili</label>
+                <select required>
+                    <option>--Pilih Domisili--</option>
+                    <option>Yogyakarta</option>
+                    <option>Jakarta</option>
+                    <option>Bandung</option>
+                </select>
+            </div>
+
+            <div class="form-button-row">
+                <button type="submit" class="btn" id="submitBtn">
+                    <span class="btn-text">Submit</span>
+                    <span class="btn-spinner" style="display: none;"></span>
+                </button>
+                <button type="reset" class="btn cancel">Reset</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rahmat Nur Hasan | Sistem Informasi SI01</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        const toggleTheme = () => document.body.classList.toggle("dark");
+
+        function showFileName() {
+            const input = document.getElementById("uploadFile");
+            const preview = document.getElementById("fileNamePreview");
+            preview.textContent = input.files[0] ? `📎 ${input.files[0].name}` : '';
+        }
+
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const bar = document.getElementById("loadingBar");
+            bar.style.width = "0%";
+
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 10;
+                bar.style.width = progress + "%";
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        alert("✅ Terima kasih! File berhasil dikirim.");
+                        location.reload();
+                    }, 600);
+                }
+            }, 200);
+        });
+    </script>
+</body>
+
+</html>

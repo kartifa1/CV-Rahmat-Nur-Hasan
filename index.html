@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio Hasan  </title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <meta name="description"
+    content="Portofolio Rahmat Nur Hasan - Mahasiswa Sistem Informasi SI01 dengan minat di desain web, HTML, CSS, JavaScript.">
+  <meta name="keywords" content="Portofolio, Desain Web, Mahasiswa SI, Rahmat, HTML, CSS, JavaScript">
+  <meta name="author" content="Rahmat Nur Hasan">
+  <link rel="icon" href="./assets/logo.png" type="image/jpg">
+</head>
+
+<body>
+  <!-- Nama: Rahmat Nur Hasan -->
+  <!-- NIM: 22SI01234 -->
+  <!-- Kelas: SI01 -->
+  <!-- Tanggal Pengerjaan: 16 Mei 2025 -->
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Kembali ke Atas">⮝</button>
+  <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-float" title="Chat via WhatsApp">
+    <img src="./assets/WA.png" alt="WhatsApp Icon" />
+  </a>
+  <header class="header fade-in">
+    <h1><span class="typed-text"></span><span class="cursor">|</span></h1>
+    <p>Mahasiswa Sistem Informasi | Web Designer Intermediate</p>
+  </header>
+  <nav class="navbar">
+    <div class="nav-wrapper">
+      <!-- Logo di kiri -->
+      <div class="nav-logo">
+        <img src="./assets/logo.png" alt="Logo" />
+      </div>
+      <!-- Menu tengah -->
+      <div class="nav-center">
+        <a href="index.html" class="active">Portofolio</a>
+        <a href="kerjasama.html">Kerja Sama</a>
+      </div>
+      <!-- Tombol mode di kanan -->
+      <button onclick="toggleTheme()" class="btn toggle-mode">Mode</button>
+    </div>
+  </nav>
+  <!-- Profil -->
+  <main class="container">
+
+    <!-- Judul Portofolio -->
+<section class="card fade-in" style="animation-delay: 0.5s;">
+  <h1 class="portfolio-title" style="text-align:center;">Personal Portfolio</h1>
+</section>
+
+
+    <!-- 2 kolom: Foto & Deskripsi -->
+    <section class="card two-column fade-in">
+      <div class="profile-image">
+        <img src="./assets/profil.jpg" alt="Foto Profil" style="max-width: 100%; border-radius: 10px;">
+      </div>
+      <div class="profile-desc">
+        <p>Hello Everyone, I am</p>
+        <h2>Rahmat Nur Hasan</h2>
+        <p>Mahasiswa Sistem Informasi di Universitas Amikom Yogyakarta</p>
+        <p>Saya memiliki minat dalam pengembangan web, eksplorasi desain kreatif, serta belajar teknologi baru untuk
+          menciptakan karya digital yang fungsional dan menarik.</p>
+      </div>
+    </section>
+
+    <!-- 2 kolom: Skills & Video -->
+    <section class="card two-column fade-in">
+      <div class="skills-box">
+        <h3>Skills and Interests</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Keahlian</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Full Stack Developer
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Machine Learning Engineer
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>kepemimpinan
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="video-box">
+        <h3>Video</h3>
+        <div class="video-wrapper">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/vtpjk1AjsH0?si=5PNXJ2bcUjQjCT3W"
+            title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 2 kolom: Galeri & Sosial Media -->
+    <section class="card two-column fade-in">
+      <div class="gallery-box">
+        <h3>Photo Gallery</h3>
+        <div class="gallery">
+          <img src="./assets/photo1.jpg" alt="Galeri 1" width="108" height="49">
+          <img src="./assets/photo2.jpg" alt="Galeri 2" width="105" height="49">
+          <img src="./assets/photo3.png" alt="Galeri 3" width="105" height="49">
+        </div>
+      </div>
+      <div class="social-box">
+        <h3>Social Media</h3>
+        <ul class="social-list">
+          <li><a href="https://instagram.com/ronhasan42" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+          </li>
+          <li><a href="https://www.linkedin.com/in/rahmat-nur-hasan-9869b82b1/
+" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://github.com/kartifa1
+            " target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 Rahmat Nur Hasan | Sistem Informasi SI01</p>
+  </footer>
+  <!-- javascript   -->
+  <script>
+    window.onscroll = function () {
+      document.getElementById("scrollTopBtn").style.display =
+        window.scrollY > 300 ? "block" : "none";
+    };
+    // scrollTop/Home
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // Mode dark
+    const toggleTheme = () => {
+      document.body.classList.toggle('dark');
+    };
+    // Tulisan nama saya sendiri otomatis
+    const text = "Hi, Saya Rahmat Nur Hasan ";
+    const typedText = document.querySelector(".typed-text");
+    let i = 0;
+    const speed = 100;
+    const delayAfterFinish = 1500;
+
+    function typeEffect() {
+      if (i < text.length) {
+        typedText.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, speed);
+      } else {
+        // Setelah selesai ketik, tunggu lalu hapus
+        setTimeout(() => {
+          eraseEffect();
+        }, delayAfterFinish);
+      }
+    }
+
+    function eraseEffect() {
+      if (i > 0) {
+        typedText.textContent = text.substring(0, i - 1);
+        i--;
+        setTimeout(eraseEffect, speed / 2);
+      } else {
+        // Ketik ulang setelah terhapus semua
+        setTimeout(typeEffect, 500);
+      }
+    }
+    // gallery saya 
+    window.onload = typeEffect;
+
+    window.onload = typeEffect;
+    function filterGallery(kategori) {
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (kategori === 'all' || item.classList.contains(kategori)) {
+          item.style.display = 'inline-block';
+          item.style.opacity = '1';
+        } else {
+          item.style.display = 'none';
+          item.style.opacity = '0';
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
