@@ -13,10 +13,10 @@ Repositori ini berisi **website portofolio pribadi statis** yang menampilkan **b
 ##  Tentang Mahasiswa
 
 - **Nama:** Rahmat Nur Hasan  
-- **NIM:** 22SI01234  
+- **NIM:** 24.12.3123 
 - **Kelas:** SI01 – Sistem Informasi  
 - **Mata Kuliah:** Pengenalan Perancangan Web  
-- **Tanggal UTS:** 16 Mei 2025  
+- **Tanggal UTS:** 14 Mei 2025 - 23 Mei 2025  
 
 ---
 
@@ -50,7 +50,7 @@ Repositori ini berisi **website portofolio pribadi statis** yang menampilkan **b
 - CSS3  
 - JavaScript (vanilla)  
 - Google Fonts: Poppins  
-- Tailwind CDN (opsional)
+
 
 ---
 
