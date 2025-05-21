@@ -1,6 +1,6 @@
 #  CV-Rahmat-Nur-Hasan
 
-Website CV interaktif dan form kerja sama – UTS PPW SI01
+Website CV dan form kerja sama – UTS PPW SI01
 
 Portofolio pribadi Rahmat Nur Hasan – Website statis berisi biodata, keahlian, galeri, dan formulir kerja sama.
 
